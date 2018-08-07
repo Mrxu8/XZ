@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--配置spring的组件采用注解装载-->
+    <mvc:annotation-driven />
+
+    <!--配置spring的包扫描-->
+    <context:component-scan base-package="com.oracle.xz"></context:component-scan>
+
+    <!--配置视图解析器（相当于struts的根据result跳转界面）-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:viewClass="org.springframework.web.servlet.view.JstlView"
+          p:prefix="/WEB-INF/" p:suffix=".jsp" />
+
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="password" value="123" />
+        <property name="username" value="root" />
+        <property name="url"
+                  value="jdbc:mysql://127.0.0.1:3306/XZ?characterEncoding=UTF8" />
+    </bean>
+
+    <!-- 用SqlSessionFactoryBean来替代SqlSessionFactoryBuilder 返回一个DefaultSqlSessionFactory的实例 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <!-- 指定一个mybatis配置文件中的位置 -->
+        <property name="configLocation">
+            <value>
+                classpath:configuration.xml
+            </value>
+        </property>
+    </bean>
+
+    <!-- 对dataSource进行事务管理 -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!-- dataSource必须和用来创建SqlSessionFactoryBean是同一数据源，也就是同一dataSource -->
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!-- 声明一个SqlSessionTemplate,它是DefaultSqlSession的替代器 -->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory" />
+    </bean>
+
+
+
+
+    <!--配置不被SpringMVC拦截的资源路径-->
+    <mvc:resources location="/fonts/" mapping="/fonts/**" />
+    <mvc:resources location="/css/" mapping="/css/**" />
+    <mvc:resources location="/js/" mapping="/js/**" />
+    <mvc:resources location="/images/" mapping="/images/**" />
+
+</beans>

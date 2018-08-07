@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.abc.travel.model.dao.TravellerDao">
+    <insert id="registerAtDao" >
+        INSERT INTO traveller(username, phoneNumber, email, password) VALUES (#{username}, #{phoneNumber}, #{email}, #{password})
+    </insert>
+    <select id="checkUsernameExistAtDao" resultType="int">
+        SELECT COUNT(username) FROM traveller WHERE username=#{0}
+    </select>
+</mapper>
