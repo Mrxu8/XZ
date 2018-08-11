@@ -249,7 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<img src="images/s4.png" alt=" " class="img-responsive" />
 							</div>
 							<div class="comments-admin-grid-right">
-								<p>下午从红砖仓库我们直接搭地铁回到 横滨 站.</p>
+								<p>${select}</p>
 								<div class="reply">
 									<a onclick="reply()">回复</a>
 								</div>
@@ -275,7 +275,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"></div>
 			<div class="leave-a-comment">
-				<h3>留下评论</h3>
+				<h3>留下评论 </h3>
 				<form action="/notes/notesComment" method="post" id="form">
 					<textarea onclick="check()" id="textarea" type="text"name="comment" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '评论...';}" required>评论...</textarea>
 
@@ -362,6 +362,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+
 			/*
 				var defaults = {
 				containerID: 'toTop', // fading element id
@@ -372,6 +373,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			*/
 								
 			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			location.href="/notes/selectNotesComment";
 								
 			});
 	</script>
@@ -396,6 +399,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  }
         }
 	</script>
+
 
 <!-- //here ends scrolling icon -->
 </body>

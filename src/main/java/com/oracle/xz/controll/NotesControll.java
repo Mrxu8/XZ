@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 游记controll
@@ -40,17 +42,15 @@ public class NotesControll {
         BlogComment blogComment=new BlogComment();
 
         Blog blog=new Blog();
-        blog.setBolgid(1);
+        blog.setBlogid(1);
 
         java.util.Date datetime = new Date();
 
-        int travellerid=traveller.getTravellerid();
-
         blogComment.setCommentTime(datetime);
-        blogComment.setTravellerid(travellerid);
-        blogComment.setBlogid(blog.getBolgid());
+        blogComment.setTraveller(traveller);
+        blogComment.setBlog(blog);
         blogComment.setContent(comment);
-        blogComment.setReplyCommentid(1);
+       // blogComment.setReplyCommentid(1);
 
         System.out.println("blogComment:"+blogComment);
         Boolean result=notesService.saveNotesComment(blogComment);
@@ -65,11 +65,18 @@ public class NotesControll {
     }
 
     //查询
-    @RequestMapping(value = "selectNotesComment")
+    @RequestMapping(value = "/selectNotesComment")
     public ModelAndView selectNotesComment(){
 
-        BlogComment blogComment=notesService.selectNotesComment();
+        List<BlogComment> blogComment=notesService.selectNotesComment();
+        System.out.println(blogComment);
+        List<String> allcontent=new ArrayList<String>();
+//        for (String s:allcontent){}
+        //allcontent.add(blogComment.);
         ModelAndView modelAndView=new ModelAndView();
+
+        modelAndView.addObject("select",blogComment.get(0).getContent());
+        modelAndView.setViewName("notes");
         return modelAndView;
 
     }

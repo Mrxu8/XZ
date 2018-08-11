@@ -6,6 +6,8 @@ import com.oracle.xz.model.dao.NotesDao;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Component("notesService")
 public class NotesServiceImp implements NotesService {
 
@@ -26,8 +28,9 @@ public class NotesServiceImp implements NotesService {
         return false;
     }
 
-    public BlogComment selectNotesComment() {
-        BlogComment blogComment=notesDao.selectNotesComment();
+    public List<BlogComment> selectNotesComment() {
+        System.out.println("进入NotesServiceImp查询");
+        List<BlogComment> blogComment=notesDao.selectNotesComment();
         return blogComment;
     }
 }

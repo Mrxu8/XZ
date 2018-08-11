@@ -3,34 +3,52 @@
 <mapper namespace="com.oracle.xz.model.dao.NotesDao">
 
     
-   <!-- <resultMap id="fullBlogComment"  type="com.oracle.xz.model.bean.BlogComment">
+    <resultMap id="fullBlogComment"  type="com.oracle.xz.model.bean.BlogComment">
 
         <id property="commentid" column="commentid"></id>
-        <result property="content" column="orderTime"/>
-        <result property="commentTime" column="orderStatus"/>
+        <result property="content" column="bccontent"/>
+        <result property="commentTime" column="commentTime"/>
 
-
-        &lt;!&ndash;  association 配置order关联对象到信息 &ndash;&gt;
+         <!--association 配置order关联对象到信息 -->
         <association property="blog" javaType="com.oracle.xz.model.bean.Blog">
-            <id property="bolgid" column="bolgid"/>
+            <id property="blogid" column="bblogid"/>
+            <result property="travellerid" column="travellerid"/>
+            <result property="content" column="content"/>
+            <result property="publicTime" column="publicTime"/>
+            <result property="title" column="title"/>
+            <result property="readerCount" column="readerCount"/>
 
         </association>
 
         <association property="traveller" javaType="com.oracle.xz.model.bean.TravellerBean">
-            <id property="travellerid" column="travellerid"/>
+            <id property="travellerid" column="ttravellerid"/>
             <result property="username" column="username"/>
             <result property="phoneNumber" column="phoneNumber"/>
             <result property="email" column="email"/>
             <result property="password" column="password"/>
+            <result property="birthday" column="birthday"/>
+            <result property="address" column="address"/>
+            <result property="intro" column="intro"/>
+            <result property="level" column="level"/>
+            <result property="nullone" column="nullone"/>
         </association>
 
-        <association property="replyComment" javaType="com.oracle.xz.model.bean.BlogComment">
-        </association>
+        <!--<association property="replyComment" javaType="com.oracle.xz.model.bean.BlogComment">-->
+        <!--</association>-->
+    </resultMap>
 
-    </resultMap>-->
+    <sql id="zd">
+      commentid,commentTime,b.blogid as bblogid,t.travellerid AS ttravellerid,bc.content AS bccontent,replyCommentid
+    </sql>
+
+    <select id="selectNotesComment" resultMap="fullBlogComment">
+        SELECT <include refid="zd"/> FROM blogcomment as bc
+        INNER JOIN blog as b ON bc.blogid=b.blogid
+        INNER JOIN traveller as t ON bc.travellerid=t.travellerid
+    </select>
     
     <!--NotesDao方法中对应的saveNotesComment方法-->
     <insert id="saveNotesComment"  useGeneratedKeys="true" keyProperty="commentid">
-        INSERT INTO blogcomment(content, commentTime, blogid,travellerid,replyCommentid) VALUES ( #{content}, #{commentTime}, #{blogid}, #{travellerid},#{replyCommentid})
+        INSERT INTO blogcomment(content, commentTime, blogid,travellerid) VALUES ( #{content}, #{commentTime}, #{blog.blogid}, #{traveller.travellerid})
     </insert>
 </mapper>
