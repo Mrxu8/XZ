@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 	<head>
 	<meta charset="utf-8">
@@ -8,7 +9,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
-<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${pageContext.request.contextPath}/">
+	<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${pageContext.request.contextPath}/">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<!-- Place favicon.gif and apple-touch-icon.png in the root directory -->
@@ -29,7 +30,23 @@
 					</ul>
 				</div>
 			</div>
+
 			<div class="row">
+				<div class="alert alert-warning fade in hide" id="adderrmsg" style="width:60%;margin:auto;position:absolute;z-index:10;">
+					<a href="#" class="close" data-dismiss="alert">
+						&times;
+					</a>
+					<strong>提示！</strong>请您进行选择验证...
+				</div>
+				<!--反馈消息-->
+				<c:if test="${not empty tooltip}">
+					<div class="alert alert-warning fade in" id="forgottip" style="width:60%;margin:auto;position:absolute;z-index:10;">
+						<a href="#" class="close" onclick="$('#forgottip').hide();return false;">
+							&times;
+						</a>
+						<strong>错误！</strong>${tooltip}
+					</div>
+				</c:if>
 				<div class="col-md-4">
 					<!-- Start Sign In Form -->
 					<form action="/traveller/login" method="post" class="form-horizontal" data-animate-effect="fadeInLeft">
@@ -51,10 +68,11 @@
 						</div>
 
 						<div class="form-group">
-							<p>未注册账号? <a href="/views/sign-up.sign-up.jsp">注册</a> | <a href="/views/forgot.forgot.jsp">忘记密码?</a></p>
+							<p>未注册账号? <a href="/views/sign-up.jsp">注册</a> | <a  onclick="javascript:this.href='/views/forgot.jsp?account='+document.all.loginaccount.value;" >忘记密码?</a></p>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="登 录" class="btn btn-primary">
+							<input type="submit" value="登 录" class="btn btn-primary" id="loginsubmit">
+							<input type="hidden" value="false" id="codeStatus">
 						</div>
 					</form>
 					<!-- END Sign In Form -->
@@ -81,7 +99,7 @@
             defaultNum : 4,	//默认的文字数量
             checkNum : 2,	//校对的文字数量
             vSpace : 5,	//间隔
-            imgName : ['1.jpg', '2.jpg'],
+            imgName : ['code1.jpg', 'code2.jpg'],
             imgSize : {
                 width: '328px',
                 height: '150px',
@@ -93,14 +111,38 @@
             ready : function() {
             },
             success : function() {
-                alert('验证成功，添加你自己的代码！');
-                //......后续操作
+                $('#codeStatus').attr('value',"true");
+                $("#loginsubmit").removeAttr("disabled");
             },
             error : function() {
-                alert('验证失败！');
+                $('#codeStatus').attr('value',"false");
+                $("#loginsubmit").attr('disabled',"true");
             }
-
         });
+        //倒计时
+        var time=3;
+        function countDown(){
+            time--;
+            if(time==0){
+                $('#adderrmsg').alert("close");
+                clearInterval(timer);
+                time=3;
+            }
+        }
+        function startTimer(){
+            $('#adderrmsg').attr("class","alert alert-warning fade in");
+            centerModals();
+            timer=setInterval("countDown()",1000);
+        }
+        //警告水平垂直居中函数
+        function centerModals() {
+            $('#adderrmsg').each(function (i) {
+                var top = ($(window).height() / 2)-350+$(window).scrollTop();
+                var left = ( $(window).width()-$(this).width())/2;
+                $(this).css("margin-top", top);
+                $(this).css("margin-left", left);
+            });
+		};
 	</script>
 	</body>
 </html>

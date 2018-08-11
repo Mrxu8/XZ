@@ -12,5 +12,9 @@
 </head>
 <body>
     <h3>Success Page</h3>
+    <div>
+        <h5>loginedTraveller:</h5>
+        ${loginedTraveller.username}
+    </div>
 </body>
 </html>

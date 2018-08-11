@@ -15,7 +15,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/home.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="js/jquery-1.10.2.min.js"></script>
 <!-- //js -->
@@ -41,11 +41,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="banner_top">
 				<div class="banner_top_left">
-					<div>
-						<img src="images/1.png">
-						<a href="views/sign-in.jsp" style="color: white">登陆</a>|<a href="views/sign-up.jsp" style="color: white">注册</a>
-					</div>
-					<p>I am travelling to <span>Alaska Mountains.</span></p>
+					<%--<div>--%>
+						<%--<img src="images/1.png">--%>
+						<%--<a href="views/sign-in.jsp" style="color: white">登陆</a>|<a href="views/sign-up.jsp" style="color: white">注册</a>--%>
+					<%--</div>--%>
+					<a href="views/sign-in.jsp" style="color: white">登陆</a>|<a href="views/sign-up.jsp" style="color: white">注册</a>
 				</div>
 				<div class="banner_top_right">
 					<form>
@@ -69,31 +69,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav cl-effect-14">
-						<li><a href="index.jsp" class="active">Home</a></li>
-						<li><a href="about.jsp">About Us</a></li>
-						<li><a href="features.jsp">Features</a></li>
-						<li><a href="portfolio.jsp">Portfolio</a></li>
-						<li><a href="codes.jsp">Pages</a></li>
-						<li><a href="blog.jsp">Blog</a></li>
-						<li><a href="#contact" class="scroll">Contact Us</a></li>
+						<li><a href="index.jsp" class="active">主页</a></li>
+						<li><a href="about.jsp">目的地</a></li>
+						<li><a href="notes.jsp">热门游记</a></li>
+						<li><a href="bourn.jsp">热门活动</a></li>
+						<li><a href="codes.jsp">攻略</a></li>
+						<li><a href="blog.jsp">APP</a></li>
+						<li><a href="#contact" class="scroll">联系我们</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->	
 				
 			</nav>
 			<div class="logo">
-				<a href="index.jsp">Your Trip<span>Alaska Mountains</span></a>
+				<%--<a href="index.jsp"><span></span></a>--%>
 			</div>
-			<div class="dummy_text">
-				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-					adipisci velit, sed quia non numquam eius modi.</p>
-			</div>
+			<%--<div class="dummy_text">--%>
+				<%--<p>去远方发现自己</p>--%>
+			<%--</div>--%>
 			<div class="social_icons">
-				<ul>
-					<li><a href="#" class="p"></a></li>
-					<li><a href="#" class="facebook"></a></li>
-					<li><a href="#" class="g"></a></li>
-					<li><a href="#" class="instagram"></a></li>
-				</ul>
+				<%--<ul>--%>
+					<%--<li><a href="#" class="p"></a></li>--%>
+					<%--<li><a href="#" class="facebook"></a></li>--%>
+					<%--<li><a href="#" class="g"></a></li>--%>
+					<%--<li><a href="#" class="instagram"></a></li>--%>
+				<%--</ul>--%>
 			</div>
 		</div>
 	</div>
@@ -133,18 +132,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							molestiae non recusandae.</p>
 					</div>
 					<div class="banner-bottom-grid1">
-						<h3>Mountains In Alaska</h3>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum 
-							necessitatibus saepe eveniet ut et voluptates repudiandae sint et 
-							molestiae non recusandae.</p>
+						<h3>关西旅行</h3>
+						<p>这是我第三次去 日本 ，前年去了 关西 ，今年初去了 北九州 ，定机票也还算有点经验，
+							对比了多家航空公司的价格服务航班以及行李额后，最后订了ANA全日空，号称五星航空，一来想体验一下广为赞叹的服务，
+							二来觉得大公司不会轻易取消航班，最后选定7月10日凌晨1点50出发的班次，回程是7月18日晚上 东京 时间22点30分的班次</p>
 					</div>
 				</div>
 				<div class="col-md-4 banner-bottom-grid">
 					<div class="banner-bottom-grid1 banner-bottom-grid1-sub">
-						<h3>Salmon Fish In Alaska</h3>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum 
-							necessitatibus saepe eveniet ut et voluptates repudiandae sint et 
-							molestiae non recusandae.</p>
+						<h3>北九州</h3>
+						<p>这是我第三次去 日本 ，前年去了 关西 ，今年初去了 北九州 ，定机票也还算有点经验，
+							对比了多家航空公司的价格服务航班以及行李额后，最后订了ANA全日空，号称五星航空，一来想体验一下广为赞叹的服务，
+							二来觉得大公司不会轻易取消航班，最后选定7月10日凌晨1点50出发的班次，回程是7月18日晚上 东京 时间22点30分的班次.</p>
 					</div>
 					<img src="images/2.jpg" alt=" " class="img-responsive" />
 					<div class="social_icons social_icons_sub1">
@@ -195,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-4 banner-bottom1-grid-right">
 					<div class="more">
-						<a class="btn effect6" href="single.jsp">Learn More</a>
+						<a class="btn effect6" href="activity.jsp">Learn More</a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>

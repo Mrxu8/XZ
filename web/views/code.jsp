@@ -5,8 +5,8 @@
 
 <title>jQuery前端验证码插件DEMO演示</title>
 
-<link rel="stylesheet" type="text/css" href="../css/verify.css">
- <base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${pageContext.request.contextPath}/">
+<link rel="stylesheet" type="text/css" href="../../../web/css/verify.css">
+    <base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${pageContext.request.contextPath}/">
 </head>
 <body>
 
@@ -18,8 +18,8 @@
 </div>
 
 
-<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="../js/verify.js" ></script>
+<script type="text/javascript" src="../../../web/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../../web/js/verify.js" ></script>
 <script type="text/javascript">
 	
 	

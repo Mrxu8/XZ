@@ -20,13 +20,13 @@ body a:hover{
 }
 /*-- banner --*/
 .banner{
-	background:url(../images/banner.jpg) no-repeat 0px 0px;
+	background:url(../images/backgrond.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:900px;
+	min-height:880px;
 }
 .banner_top {
     margin: 2em 0 3em;
@@ -1751,7 +1751,7 @@ ul.wmuSliderPagination {
 		width: 85%;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -110px 0px;
+		background: url(../images/backgrond.jpg) no-repeat -105px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -1793,7 +1793,7 @@ ul.wmuSliderPagination {
 		width: 100%;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -235px 0px;
+		background: url(../images/backgrond.jpg) no-repeat -235px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2089,7 +2089,7 @@ ul.wmuSliderPagination {
 		margin: 0 0 0 19em;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -280px 0px;
+		background: url(../images/backgrond.jpg) no-repeat -280px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2120,7 +2120,7 @@ ul.wmuSliderPagination {
 		margin: 3em 0 0;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -185px 0px;
+		background: url(../images/backgrond.jpg) no-repeat -185px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2289,7 +2289,7 @@ ul.wmuSliderPagination {
 		margin: 2em 0 0;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -250px 0px;
+		background: url(../images/backgrond.jpg) no-repeat -250px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2584,7 +2584,7 @@ ul.wmuSliderPagination {
 		margin: 0;
 	}
 	.banner {
-		background: url(../images/banner.jpg) no-repeat -290px 0px;
+		background: url(../images/backgrond.jpg) no-repeat -290px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;

@@ -31,4 +31,24 @@ public class TravellerServiceImp implements TravellerService{
         int result=travellerDao.checkUsernameExistAtDao(username);
         return result>0?false:true;
     }
+
+    public boolean checkAccountExisTAtService(String account) {
+        int result=travellerDao.checkAccountExistAtDao(account);
+        return result>0?false:true;
+    }
+
+    public TravellerBean loginAtService(String password, String account) {
+        TravellerBean result=travellerDao.loginAtDao(password,account);
+        return result;
+    }
+
+    public boolean recoversPasswordAtService(String password, String account) {
+        int result=travellerDao.recoversPasswordAtDao(password,account);
+        return result>0?true:false;
+    }
+
+    public TravellerBean getCodeAtService(String username) {
+        TravellerBean result=travellerDao.getCodeAtDao(username);
+        return result;
+    }
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.xz.model.dao.NotesDao">
+
+    
+   <!-- <resultMap id="fullBlogComment"  type="com.oracle.xz.model.bean.BlogComment">
+
+        <id property="commentid" column="commentid"></id>
+        <result property="content" column="orderTime"/>
+        <result property="commentTime" column="orderStatus"/>
+
+
+        &lt;!&ndash;  association 配置order关联对象到信息 &ndash;&gt;
+        <association property="blog" javaType="com.oracle.xz.model.bean.Blog">
+            <id property="bolgid" column="bolgid"/>
+
+        </association>
+
+        <association property="traveller" javaType="com.oracle.xz.model.bean.TravellerBean">
+            <id property="travellerid" column="travellerid"/>
+            <result property="username" column="username"/>
+            <result property="phoneNumber" column="phoneNumber"/>
+            <result property="email" column="email"/>
+            <result property="password" column="password"/>
+        </association>
+
+        <association property="replyComment" javaType="com.oracle.xz.model.bean.BlogComment">
+        </association>
+
+    </resultMap>-->
+    
+    <!--NotesDao方法中对应的saveNotesComment方法-->
+    <insert id="saveNotesComment"  useGeneratedKeys="true" keyProperty="commentid">
+        INSERT INTO blogcomment(content, commentTime, blogid,travellerid,replyCommentid) VALUES ( #{content}, #{commentTime}, #{blogid}, #{travellerid},#{replyCommentid})
+    </insert>
+</mapper>

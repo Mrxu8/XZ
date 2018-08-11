@@ -29,7 +29,7 @@ body a:hover{
 	min-height:800px;
 }
 .banner1{
-	background:url(../images/19.jpg) 0px 0px no-repeat;
+	background:url(../images/singleback.jpeg) 0px 0px no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -1171,7 +1171,7 @@ p.dummy-text{
 	position:relative;
 }
 .about-grid-pos:after{
-	background: url(../images/2.png) no-repeat -0px 0px;
+	background: url(../images/singleback.jpeg) no-repeat -0px 0px;
     background-size: 93%;
     display: block;
     width: 1054px;
@@ -1890,12 +1890,14 @@ h2.typoh2{
 	width:32.25%;
 	}
 .leave-a-comment textarea{
+	position: relative;left: 390px;
 	resize:none;
 	min-height:200px;
-	width:100% !important;
+	width:60% !important;
 	margin:1.5em 0;
 	}
 .leave-a-comment input[type="submit"]{
+	position: relative;left: 390px;
 	background: #6B8FA8;
     color: #fff;
     font-size: 1em;
@@ -1917,6 +1919,7 @@ h2.typoh2{
     margin: 0 1em;
 }
 .leave-a-comment h3 {
+	position: relative;left: 390px;
     font-size: 2em;
     color: #EB6F63;
     margin: 0 0 2em;
@@ -2130,7 +2133,7 @@ h2.typoh2{
 		padding: 1em 0 0;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 76%;
 	}
 	.testimonials-grid1 h4 {
@@ -2308,7 +2311,7 @@ h2.typoh2{
 		width: 100%;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 96%;
 		width: 805px;
 	}
@@ -2415,7 +2418,7 @@ h2.typoh2{
 }
 @media (max-width:768px){
 	.banner1 {
-		background: url(../images/19.jpg) -102px 0px no-repeat;
+		background: url(../images/singleback.jpeg) -102px 0px no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2495,7 +2498,7 @@ h2.typoh2{
 		font-size: 1.4em;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 96%;
 		width: 667px;
 		bottom: -22%;
@@ -2701,7 +2704,7 @@ h2.typoh2{
 		font-size: 1.2em;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 96%;
 		width: 485px;
 		bottom: -25%;
@@ -2787,7 +2790,7 @@ h2.typoh2{
 		font-size: 1.2em;
 	}
 	.banner1 {
-		background: url(../images/19.jpg) -132px 0px no-repeat;
+		background: url(../images/singleback.jpeg) -132px 0px no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2826,7 +2829,7 @@ h2.typoh2{
 		margin: 0 0 1.5em;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 96%;
 		width: 410px;
 		bottom: -20%;
@@ -2891,7 +2894,7 @@ h2.typoh2{
 }
 @media (max-width:375px){
 	.banner1 {
-		background: url(../images/19.jpg) -160px 0px no-repeat;
+		background: url(../images/singleback.jpeg) -160px 0px no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2914,7 +2917,7 @@ h2.typoh2{
 		top: 9%;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 96%;
 		width: 365px;
 	}
@@ -2945,7 +2948,7 @@ h2.typoh2{
 }
 @media (max-width: 320px){
 	.banner1 {
-		background: url(../images/19.jpg) -199px 0px no-repeat;
+		background: url(../images/singleback.jpeg) -199px 0px no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -3097,7 +3100,7 @@ h2.typoh2{
 		font-size: 1em;
 	}
 	.about-grid-pos:after {
-		background: url(../images/2.png) no-repeat -0px 0px;
+		background: url(../images/singleback.jpeg) no-repeat -0px 0px;
 		background-size: 96%;
 		width: 305px;
 	}

@@ -1,10 +1,7 @@
 package com.oracle.xz.model.dao;
 
-
 import com.oracle.xz.model.bean.TravellerBean;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component("travellerDao")
 public class TravellerDaoImp extends BaseDao implements TravellerDao {
@@ -19,6 +16,35 @@ public class TravellerDaoImp extends BaseDao implements TravellerDao {
         System.out.println("dao层检测用户名是否存在。。。");
         TravellerDao dao=getSqlSession().getMapper(TravellerDao.class);
         int result=dao.checkUsernameExistAtDao(username);
+        System.out.println("dao层结果："+result);
+        return result;
+    }
+
+    public int checkAccountExistAtDao(String account) {
+        TravellerDao dao=getSqlSession().getMapper(TravellerDao.class);
+        int result=dao.checkAccountExistAtDao(account);
+        System.out.println("dao层结果："+result);
+        return result;
+    }
+
+    public TravellerBean loginAtDao(String password, String account) {
+        TravellerDao dao=getSqlSession().getMapper(TravellerDao.class);
+        TravellerBean result=dao.loginAtDao(password,account);
+        System.out.println("dao层结果："+result);
+        return result;
+    }
+
+    public int recoversPasswordAtDao(String password,String account) {
+        TravellerDao dao=getSqlSession().getMapper(TravellerDao.class);
+        int result=dao.recoversPasswordAtDao(password,account);
+        System.out.println("dao层结果："+result);
+        return result;
+    }
+
+    public TravellerBean getCodeAtDao(String username) {
+        TravellerDao dao=getSqlSession().getMapper(TravellerDao.class);
+        System.out.println();
+        TravellerBean result=dao.getCodeAtDao(username);
         System.out.println("dao层结果："+result);
         return result;
     }

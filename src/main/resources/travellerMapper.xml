@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.abc.travel.model.dao.TravellerDao">
+<mapper namespace="com.oracle.xz.model.dao.TravellerDao">
+    <!--注册-->
     <insert id="registerAtDao" >
         INSERT INTO traveller(username, phoneNumber, email, password) VALUES (#{username}, #{phoneNumber}, #{email}, #{password})
     </insert>
+    <!--检测用户名是否存在-->
     <select id="checkUsernameExistAtDao" resultType="int">
         SELECT COUNT(username) FROM traveller WHERE username=#{0}
+    </select>
+    <!--检测手机号/邮箱是否存在-->
+    <select id="checkAccountExistAtDao" resultType="int">
+        SELECT count(travellerId) FROM traveller WHERE  phoneNumber=#{0} OR email=#{1}
+    </select>
+    <!--登录-->
+    <select id="loginAtDao" resultType="com.oracle.xz.model.bean.TravellerBean">
+        SELECT * FROM traveller WHERE password=#{0} AND username=#{1} OR phoneNumber=#{1} OR email=#{1}
+    </select>
+    <!--找回密码-->
+    <update id="recoversPasswordAtDao">
+        UPDATE traveller SET password=#{0} WHERE username=#{1} OR phoneNumber=#{1} OR email=#{1}
+    </update>
+    <!--查询要发送验证码的邮箱/手机号-->
+    <select id="getCodeAtDao" resultType="com.oracle.xz.model.bean.TravellerBean">
+        SELECT email,phoneNumber FROM traveller WHERE username=#{0}
     </select>
 </mapper>

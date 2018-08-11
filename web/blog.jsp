@@ -14,7 +14,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/home.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="js/jquery-1.10.2.min.js"></script>
 <!-- //js -->
@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="index.jsp">Home</a></li>
 						<li><a href="about.jsp">About Us</a></li>
 						<li><a href="features.jsp">Features</a></li>
-						<li><a href="portfolio.jsp">Portfolio</a></li>
+						<li><a href="bourn.jsp">Portfolio</a></li>
 						<li><a href="codes.jsp">Pages</a></li>
 						<li><a href="blog.jsp" class="active">Blog</a></li>
 						<li><a href="#contact" class="scroll">Contact Us</a></li>
@@ -100,10 +100,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="blog-grids">
 				<div class="col-md-6 blog-grid">
 					<div class="col-xs-4 blog-grid-left">
-						<a href="single.jsp"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="activity.jsp"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div> 
 					<div class="col-xs-8 blog-grid-right">
-						<a href="single.jsp">sint occaecat cupidatat non proident</a>
+						<a href="activity.jsp">sint occaecat cupidatat non proident</a>
 						<h4>27 November 2015</h4>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.</p>
@@ -115,17 +115,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-6 blog-grid">
 					<div class="col-xs-4 blog-grid-left">
-						<a href="single.jsp"><img src="images/17.jpg" alt=" " class="img-responsive" /></a>
+						<a href="activity.jsp"><img src="images/17.jpg" alt=" " class="img-responsive" /></a>
 					</div> 
 					<div class="col-xs-8 blog-grid-right">
-						<a href="single.jsp">sint occaecat cupidatat non proident</a>
+						<a href="activity.jsp">sint occaecat cupidatat non proident</a>
 						<h4>28 November 2015</h4>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.</p>
 					</div>
 					<div class="clearfix"> </div>
 					<div class="more m1">
-						<a class="btn effect6" href="single.jsp">Learn More</a>
+						<a class="btn effect6" href="activity.jsp">Learn More</a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -133,32 +133,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="blog-grids">
 				<div class="col-md-6 blog-grid">
 					<div class="col-xs-4 blog-grid-left">
-						<a href="single.jsp"><img src="images/18.jpg" alt=" " class="img-responsive" /></a>
+						<a href="activity.jsp"><img src="images/18.jpg" alt=" " class="img-responsive" /></a>
 					</div> 
 					<div class="col-xs-8 blog-grid-right">
-						<a href="single.jsp">sint occaecat cupidatat non proident</a>
+						<a href="activity.jsp">sint occaecat cupidatat non proident</a>
 						<h4>27 November 2015</h4>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.</p>
 					</div>
 					<div class="clearfix"> </div>
 					<div class="more m1">
-						<a class="btn effect6" href="single.jsp">Learn More</a>
+						<a class="btn effect6" href="activity.jsp">Learn More</a>
 					</div>
 				</div>
 				<div class="col-md-6 blog-grid">
 					<div class="col-xs-4 blog-grid-left">
-						<a href="single.jsp"><img src="images/19.jpg" alt=" " class="img-responsive" /></a>
+						<a href="activity.jsp"><img src="images/19.jpg" alt=" " class="img-responsive" /></a>
 					</div> 
 					<div class="col-xs-8 blog-grid-right">
-						<a href="single.jsp">sint occaecat cupidatat non proident</a>
+						<a href="activity.jsp">sint occaecat cupidatat non proident</a>
 						<h4>28 November 2015</h4>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.</p>
 					</div>
 					<div class="clearfix"> </div>
 					<div class="more m1">
-						<a class="btn effect6" href="single.jsp">Learn More</a>
+						<a class="btn effect6" href="activity.jsp">Learn More</a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -166,32 +166,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="blog-grids">
 				<div class="col-md-6 blog-grid">
 					<div class="col-xs-4 blog-grid-left">
-						<a href="single.jsp"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="activity.jsp"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div> 
 					<div class="col-xs-8 blog-grid-right">
-						<a href="single.jsp">sint occaecat cupidatat non proident</a>
+						<a href="activity.jsp">sint occaecat cupidatat non proident</a>
 						<h4>27 November 2015</h4>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.</p>
 					</div>
 					<div class="clearfix"> </div>
 					<div class="more m1">
-						<a class="btn effect6" href="single.jsp">Learn More</a>
+						<a class="btn effect6" href="activity.jsp">Learn More</a>
 					</div>
 				</div>
 				<div class="col-md-6 blog-grid">
 					<div class="col-xs-4 blog-grid-left">
-						<a href="single.jsp"><img src="images/17.jpg" alt=" " class="img-responsive" /></a>
+						<a href="activity.jsp"><img src="images/17.jpg" alt=" " class="img-responsive" /></a>
 					</div> 
 					<div class="col-xs-8 blog-grid-right">
-						<a href="single.jsp">sint occaecat cupidatat non proident</a>
+						<a href="activity.jsp">sint occaecat cupidatat non proident</a>
 						<h4>28 November 2015</h4>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.</p>
 					</div>
 					<div class="clearfix"> </div>
 					<div class="more m1">
-						<a class="btn effect6" href="single.jsp">Learn More</a>
+						<a class="btn effect6" href="activity.jsp">Learn More</a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -212,7 +212,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //blog -->
 <!-- contact -->
 	<div class="contact" id="contact">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16271316.765282348!2d-176.42968180551608!3d60.143570657527626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5400df9cc0aec01b%3A0xbcdb5e27a98adb35!2sAlaska%2C+USA!5e0!3m2!1sen!2sin!4v1448597600354" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<%--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16271316.765282348!2d-176.42968180551608!3d60.143570657527626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5400df9cc0aec01b%3A0xbcdb5e27a98adb35!2sAlaska%2C+USA!5e0!3m2!1sen!2sin!4v1448597600354" frameborder="0" style="border:0" allowfullscreen></iframe>--%>
 		<div class="container">
 			<h3>Contact Us</h3>
 			<div class="col-md-4 contact-grid">

@@ -14,7 +14,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/home.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="index.jsp">Home</a></li>
 						<li><a href="about.jsp">About Us</a></li>
 						<li><a href="features.jsp">Features</a></li>
-						<li><a href="portfolio.jsp">Portfolio</a></li>
+						<li><a href="bourn.jsp">Portfolio</a></li>
 						<li><a href="codes.jsp" class="active">Pages</a></li>
 						<li><a href="blog.jsp">Blog</a></li>
 						<li><a href="#contact" class="scroll">Contact Us</a></li>

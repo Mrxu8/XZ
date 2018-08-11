@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 	<head>
 	<meta charset="utf-8">
@@ -8,7 +9,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
-<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${pageContext.request.contextPath}/">
+	<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${pageContext.request.contextPath}/">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<!-- Place favicon.gif and apple-touch-icon.png in the root directory -->
@@ -29,6 +30,15 @@
 				</div>
 			</div>
 			<div class="row">
+				<!--反馈消息-->
+				<c:if test="${not empty tooltip}">
+					<div class="alert alert-warning fade in" id="forgottip" style="width:60%;margin:auto;position:absolute;z-index:10;">
+						<a href="#" class="close" onclick="$('#forgottip').hide();return false;">
+							&times;
+						</a>
+						<strong>错误！</strong>${tooltip}
+					</div>
+				</c:if>
 				<div class="col-md-4">
 					<!-- Start Sign Up Form -->
 					<form action="/traveller/register" method="post" class="form-horizontal" data-animate-effect="fadeInLeft">
@@ -70,7 +80,6 @@
 	<script src="../js/main.js"></script>
 	<!--表单验证-->
 	<script src="../js/bootstrapValidator.min.js"></script>
-
 
 	</body>
 </html>
